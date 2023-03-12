@@ -1,0 +1,137 @@
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 8px;
+    row-gap: 16px;
+    padding: 20px;
+}
+
+@media (min-width: 1800px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1124px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-title{
+        font-size: 16px!important;
+        line-height: 24px!important;
+    }
+    .video-author{
+        font-size: 14px!important;
+    }
+    .video-stats{
+        font-size: 14px!important;
+    }
+}
+
+@media (max-width: 869px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 644px) {
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.video-preview{
+    padding: 4px;
+}
+.thumbnail-container{
+    margin-bottom: 12px;
+    position: relative;
+}
+.thumbnail{
+    width: 100%;
+}
+.video-time{
+    position: absolute;
+    bottom: 11px;
+    right: 4px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+.video-content{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.channel-img {
+    width: intrinsic; /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content; /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
+    width: max-content;
+    height: fit-content;
+    position: relative;
+}
+.chan-img{
+    width: 36px;
+    border-radius: 100%;
+    border: none;
+}
+.tooltip-chan-img{
+    width: 40px;
+    border-radius: 100%;
+    border: none;
+}
+.video-title{
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+}
+.video-author{
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    color: #606060;
+}
+.video-stats{
+    margin: 4px 0 16px;
+    font-size: 12px;
+    color: #606060;
+}
+.subs-tooltip{
+    background-color: white;
+    width: intrinsic; /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content; /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
+    width: max-content;
+    white-space: nowrap;
+    display: flex;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    position: absolute;
+    bottom: -62px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.subs-tooltip-content{
+    margin-left: 10px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subs-tooltip-content .number{
+    font-size: 14px;
+}
+
+.channel-img:hover .subs-tooltip{
+    opacity: 1;
+}
